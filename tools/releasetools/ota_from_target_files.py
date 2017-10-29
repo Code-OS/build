@@ -498,18 +498,13 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
 
   system_progress = 0.75
 
-  script.Print("**************************************************");
-  script.Print(" ____    ________   _____   ____    ____          ");
-  script.Print("/\\  _`\\ /\\_____  \\ /\\  __`\\/\\  _`\\ /\\  _`\\         ");
-  script.Print("\\ \\ \\L\\_\\/____//'/'\\ \\ \\/\\ \\ \\,\\L\\_\\ \\ \\L\\\\");
-  script.Print(" \\ \\ \\L_L    //'/'  \\ \\ \\ \\ \\/_\\__ \\ \\ ,__/       ");
-  script.Print("  \\ \\ \\/, \\ //'/'___ \\ \\ \\_\\ \\/\\ \\L\\ \\ \\ \\/   ");
-  script.Print("   \\ \\____/ /\\_______\\\\ \\_____\\ `\\____\\ \\_\\       ");
-  script.Print("    \\/___/  \\/_______/ \\/_____/\\/_____/\\/_/   ");
-  script.Print("                                                   ");
-  script.Print("                  AOSP Oreo                        ");
-  script.Print("          A Ground Zero Roms Project               ");
-  script.Print("***************************************************");
+  script.Print("*********************************************");
+  script.Print("        __   __   __   ___     __   __       ");
+  script.Print("       /  ` /  \ |  \ |__     /  \ /__`      ");
+  script.Print("       \__, \__/ |__/ |___    \__/ .__/      ");
+  script.Print("                                             ");
+  script.Print("           AOSP Oreo by CodeOS TEAM          ");
+  script.Print("*********************************************");
 
   if OPTIONS.wipe_user_data:
     system_progress -= 0.1
@@ -601,7 +596,7 @@ endif;
   metadata["ota-required-cache"] = str(script.required_cache)
   WriteMetadata(metadata, output_zip)
 
-  common.ZipWriteStr(output_zip, "META-INF/org/gzosp/releasekey",
+  common.ZipWriteStr(output_zip, "META-INF/org/codeos/releasekey",
                      ""+input_zip.read("META/releasekey.txt"))
 
 def WritePolicyConfig(file_name, output_zip):
